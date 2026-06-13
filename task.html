@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    text-align:center;
+    margin-top:100px;
+}
+
+#bulb{
+    font-size:120px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="bulb">💡</h1>
+
+<button onclick="toggleBulb()">Turn ON/OFF</button>
+
+<script>
+let isOn = false;
+
+function toggleBulb(){
+    const bulb = document.getElementById("bulb");
+
+    if(isOn){
+        bulb.style.filter = "grayscale(100%)";
+        isOn = false;
+    }
+    else{
+        bulb.style.filter = "drop-shadow(0 0 20px yellow)";
+        isOn = true;
+    }
+}
+</script>
+
+</body>
+</html>
